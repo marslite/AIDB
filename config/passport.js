@@ -2,7 +2,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 //Require your User Model here!
 const userModel = require('../models/user');
-const user = require('../models/user');
+
 
 // configuring Passport!
 passport.use(new GoogleStrategy({
@@ -39,7 +39,7 @@ passport.use(new GoogleStrategy({
 ));
 
 passport.serializeUser(function(user, done) {
-  done(null, user.id);
+  done(null, user._id);
 });
 
 passport.deserializeUser(async function(id, done) {
@@ -51,8 +51,9 @@ passport.deserializeUser(async function(id, done) {
 
   //Here we are finding the user by getting the if from the session cookie and search the db
   const user = await userModel.findById(id);
-  done(err, user);
-  
+  // const err = new Error(`User id ${id} not found?`);
+  done(null, user);
+
   
 
 });

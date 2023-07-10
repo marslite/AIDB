@@ -8,18 +8,27 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
-const indexRoutes = require('./routes/index');
+const createError = require('http-errors');
 
 
-// create the Express app
-const app = express();
+
+
+
+
+require('dotenv').config();
 
 // connect to the MongoDB with mongoose
 require('./config/database');
 // configure Passport
 require('./config/passport');
 
+//session middleware
+const indexRoutes = require('./routes/index');
+const aidbRouter = require('./routes/aidb');
 
+
+// create the Express app
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,7 +38,7 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // mount the session middleware
 app.use(session({
@@ -51,11 +60,14 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
+app.use('/aidb', aidbRouter);
 
 
 // invalid request, send 404 page
 app.use(function(req, res) {
   res.status(404).send('Cant find that!');
+  //consider doing line70
+  // next(createError(404));
 });
 
 module.exports = app;

@@ -9,7 +9,7 @@
   <style>
     body{
       margin: 0;
-      background-color: rgb(186, 192, 212);
+      background-color: rgb(215, 215, 215);
     }
     a{
       font-size: large;
@@ -24,14 +24,29 @@
       color: beige;
     }
 
+    img{
+      height: 13px;
+      width: 13px;
+
+    }
+
   </style>
 </head>
 <body>
   <nav>
-    <a href="/">Home🏡</a>
+    <a href="/"><button><b>AIDB</b>🏡</button></a>
     &nbsp;|&nbsp;
-    <a href="/flights/new">EDIT </a>
+    <!-- <a href="/flights/new">EDIT</a> -->
     &nbsp;|&nbsp;
-    <a href="/flights">EDIT 🗼</a>
+    <!-- <a href="/flights">EDIT</a> -->
+
+    <!-- <img src="/images/camera.svg"> -->
+
+    <% if (user) { %>
+      <a href="/aidb/new"><button>➕ AI Tool</button></a>
+      <a href="/logout"><button>🚪Logout</button></a>
+      <% } else { %>
+        <a href="/auth/google" class="login"><button><img src="https://i.imgur.com/FHjYyi0.png">Log In</button></a>
+      <% } %>
   </nav>
   
