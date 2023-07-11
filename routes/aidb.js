@@ -16,6 +16,10 @@ router.post('/',aidbCtrl.create)
 // GET /aidb/:id SHOW the single Tool
 router.get('/:id',aidbCtrl.show )
 
+//POST aidb/:id/review
+router.post('/:id/review', aidbCtrl.createReview);
+
+
 
 
 

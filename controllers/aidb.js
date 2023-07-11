@@ -1,7 +1,7 @@
 const userModel = require("../models/user")
 const toolModel = require("../models/tool");
 
-module.exports = {index,newTool,create,show};
+module.exports = {index,newTool,create,show, createReview};
 
 
 // async function landing(req,res){
@@ -26,6 +26,7 @@ async function show(req,res){
     const tool = await toolModel.findById(req.params.id);
     res.render('aidb/show', {tool});
     console.log("Show Tool rendered :D")
+    console.log(tool, "<--- ID ")
 
 
 
@@ -54,6 +55,26 @@ async function create(req,res){
     } catch (err) {
         console.log(err);
         res.render("aidb/new", {errorMsg: err.message});
+        
+    }
+}
+
+async function createReview(req,res){
+    console.log(req.body);
+    try {
+        const toolFromTheDatabase = await toolModel.findById(req.params.id);
+
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
+        req.body.userAvatar = req.user.avatar;
+
+        toolFromTheDatabase.reviews.push(req.body);
+        await toolFromTheDatabase.save();
+        console.log(toolFromTheDatabase, "Succesfully inserted into reviews");
+        res.redirect(`/aidb/${req.params.id}`)
+        
+    } catch (err) {
+        res.send(err);
         
     }
 }
