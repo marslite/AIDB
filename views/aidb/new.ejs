@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/aidb" method="POST">
+  <label>Title:</label>
+  <input type="text" name="title">
+  <label>Category:</label>
+  <input type="text" name="category">
+  <label> Developer:</label>
+  <input type="text" name="developers">
+  <label>License</label>
+  <select name="license">
+    <option value="Free">Free</option>
+    <option value="Commercial">Commercial</option>
+    <option value="Open-Source">Open-Source</option>
+    <option value="nan">NaN</option>
+  </select>
+
+  <!-- <label>Now Showing:</label>
+  <input type="checkbox" name="nowShowing" checked> -->
+  <input type="submit" value="Add Tool">
+</form>
+
+<%- include('../partials/footer') %>

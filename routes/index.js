@@ -16,7 +16,8 @@ router.get('/', function(req, res, next) {
   console.log("Check here <----")
 
   // res.render('index', {title: 'AIDB'})
-  res.redirect('/aidb')
+  // res.redirect('/aidb')
+  res.render("index")
 
   // console.log('lol');
   
@@ -34,7 +35,7 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/', // UPDATE THIS, where do you want the client to go after you login ~ Index
+    successRedirect : '/aidb', // UPDATE THIS, where do you want the client to go after you login ~ Index
     failureRedirect : '/error' //  UPDATE THIS, where do you want the client to go if login fails
   }
 ));

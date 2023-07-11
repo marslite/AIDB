@@ -2,8 +2,22 @@ const express = require('express');
 const router = express.Router();
 const aidbCtrl = require('../controllers/aidb');
 
+
+
+
 // GET /aidb
-router.get('/', aidbCtrl.index);
+router.get('/', aidbCtrl.index)
+// GET /aidb/new
+router.get('/new', aidbCtrl.newTool)
+//POST /aidb
+router.post('/',aidbCtrl.create)
+
+
+
+
+
+
+// router.get('/', )
 
 // GET /aidb/new
 // router.get('/new', aidbCtrl.new);
