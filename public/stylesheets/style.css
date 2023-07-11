@@ -35,13 +35,12 @@ body{
 
 }
 
-p {
+.indexP {
   color:rgb(42, 114, 88);
   margin-top: 9vh;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 3vh;
-
 }
 
 #header {

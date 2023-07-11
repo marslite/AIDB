@@ -9,9 +9,12 @@ const aidbCtrl = require('../controllers/aidb');
 router.get('/', aidbCtrl.index)
 // GET /aidb/new
 router.get('/new', aidbCtrl.newTool)
+
 //POST /aidb
 router.post('/',aidbCtrl.create)
 
+// GET /aidb/:id SHOW the single Tool
+router.get('/:id',aidbCtrl.show )
 
 
 

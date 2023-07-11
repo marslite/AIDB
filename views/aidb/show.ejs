@@ -1,0 +1,89 @@
+<%- include('../aidb/partials/header') %>
+
+
+<section id="show-page">
+    <div>Title: </div>
+    <div>
+      <%= tool.title %>
+    </div>
+    <div>Category: </div>
+    <div>
+      <%= tool.category %>
+    </div>
+    <div>Developer: </div>
+    <div>
+      <%= tool.developers %>
+    </div>
+    <div>Licese:</div>
+    <%= tool.license %>
+    
+  </section>
+
+
+
+  <% if (user) { %>
+    <form id="add-review-form" method="POST" action="/aidb/<%= tool._id %>/reviews">
+      <label>Review:</label>
+      <textarea name="content"></textarea>
+      <label>Rating:</label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+      </select>
+      <input type="submit" value="Add Review">
+    </form>
+    <% } else { %>
+      <p>Please Login to leave a review</p>
+    <% } %>
+
+
+        <!-- // Create a list of reviews here -->
+
+        <% if (tool.reviews.length) { %>
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Date</th>
+                  <th>Review</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% tool.reviews.forEach(function(r) { %>
+                  <tr>
+                    <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
+                    <td><%= r.createdAt.toLocaleDateString() %></td>
+                    <td>
+                      <%= r.createdAt.toLocaleDateString() %>
+                    </td>
+                    <td>
+                      <%= r.content %>
+                    </td>
+                    <td>
+                      <%= r.rating %>
+                    </td>
+                    <td>
+                      <% if (user && user._id.equals(r.user)) { %>
+                        <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                          <button type="submit">X</button>
+                        </form>
+                      <% } %>
+                    </td>
+                  </tr>
+                  <% }); %>
+              </tbody>
+            </table>
+            <% } else { %>
+              <h5>No Reviews Yet</h5>
+              <% } %>
+                <%- include('../aidb/partials/footer') %>
+
+
+
+
+
+<%- include('../aidb/partials/footer') %>

@@ -1,7 +1,7 @@
 const userModel = require("../models/user")
 const toolModel = require("../models/tool");
 
-module.exports = {index,newTool,create};
+module.exports = {index,newTool,create,show};
 
 
 // async function landing(req,res){
@@ -17,6 +17,23 @@ async function index(req,res){
     console.log(aidb);
     res.render("aidb/index",{aidb});
 }
+
+
+
+async function show(req,res){
+    console.log(req.user);
+
+    const tool = await toolModel.findById(req.params.id);
+    res.render('aidb/show', {tool});
+    console.log("Show Tool rendered :D")
+
+
+
+
+    
+        
+}
+
 
 
 
