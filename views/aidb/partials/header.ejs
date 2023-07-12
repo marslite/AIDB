@@ -49,4 +49,35 @@
         <a href="/auth/google" class="login"><button><img src="https://i.imgur.com/FHjYyi0.png">Log In</button></a>
       <% } %>
   </nav>
+
+
+  <table id="list">
+    <thead>
+      <tr>
+        <!-- <th>Title</th>
+        <th>Category</th>
+        <th></th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <% tools.forEach(function(t){ %>
+        <tr>
+          <td><%= t.title %></td>
+          <td><%= t.category %></td>
+          <td><%= t.license %></td>
+          <td><a href="/aidb/<%= t._id %>">Click</a></td>
+        </tr>
+
+        <% }); %>
+      <td><% tools.title %></td>
+      
+    </tbody>
+
+
+  </table>
+
+
+
+
+
   

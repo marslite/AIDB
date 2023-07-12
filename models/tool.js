@@ -16,7 +16,8 @@ const reviewSchema = new Schema({
     },
     user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
     userName: String,
-    userAvatar: String
+    userAvatar: String,
+
 },{
     timestamps: true
 })
@@ -29,10 +30,17 @@ const toolSchema = new mongoose.Schema({
     category: {type: String, required: true},
     developers: {type: String, required: true},
     license : {type: String, required: true},
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
+    upvote: {
+        type: Number,
+        default:0
+    }
 },{
     timestamps: true
 })
+
+
+
 
 
 

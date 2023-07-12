@@ -4,27 +4,24 @@ const toolModel = require("../models/tool");
 module.exports = {index,newTool,create,show, createReview};
 
 
-// async function landing(req,res){
-//     const aidb = await userModel.find({});
-//     console.log("GETTING INSIDE THE CONTROLLER");
-//     console.log(aidb);
-//     res.render("aidb/index");
-// }
+
 
 async function index(req,res){
     const aidb = await userModel.find({});
+    const tools = await toolModel.find({});
     console.log("GETTING INSIDE THE CONTROLLER");
-    console.log(aidb);
-    res.render("aidb/index",{aidb});
+    console.log(aidb, "<-- All Users");
+    console.log(tools, "<--- All Tools")
+    res.render("aidb/index",{aidb, tools});
 }
 
 
 
 async function show(req,res){
     console.log(req.user);
-
+    const tools = await toolModel.find({});
     const tool = await toolModel.findById(req.params.id);
-    res.render('aidb/show', {tool});
+    res.render('aidb/show', {tool, tools});
     console.log("Show Tool rendered :D")
     console.log(tool, "<--- ID ")
 
