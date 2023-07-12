@@ -25,6 +25,7 @@ require('./config/passport');
 //session middleware
 const indexRoutes = require('./routes/index');
 const aidbRouter = require('./routes/aidb');
+const reviewRouter = require('./routes/reviews');
 // const landRouter = require('./routes/landing')
 
 
@@ -62,6 +63,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/aidb', aidbRouter);
+app.use('/aidb',reviewRouter);
 // app.use('/landing', landRouter)
 
 
