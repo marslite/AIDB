@@ -23,6 +23,15 @@ const reviewSchema = new Schema({
 })
 
 
+// const upvoteSchema = new mongoose.Schema({
+//     upvote:{
+//         type: Number,
+//         default: 4
+//     }
+// },{
+//     timestamps : true
+// })
+
 // One Tool has many Upvotes
 
 const toolSchema = new mongoose.Schema({
@@ -31,16 +40,10 @@ const toolSchema = new mongoose.Schema({
     developers: {type: String, required: true},
     license : {type: String, required: true},
     reviews: [reviewSchema],
-    upvote: {
-        type: Number,
-        default:0
-    }
+    upvote: {type: String, default:0}
 },{
     timestamps: true
 })
-
-
-
 
 
 

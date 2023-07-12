@@ -67,7 +67,9 @@
     <div>Licese:</div>
     <%= tool.license %>
     <div>Upvotes:</div>
-    <%= tool.upvote %>
+    <td><%= tool.upvote %></td>
+
+
     
   </section>
 
@@ -120,7 +122,7 @@
                     </td>
                     <td>
                       <% if (user && user._id.equals(r.user)) { %>
-                        <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                        <form action="/aidb/reviews/<%= r._id %>?_method=DELETE" method="POST">
                           <button type="submit">X</button>
                         </form>
                       <% } %>

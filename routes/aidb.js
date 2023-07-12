@@ -19,6 +19,10 @@ router.get('/:id',aidbCtrl.show )
 //POST aidb/:id/review
 router.post('/:id/review', aidbCtrl.createReview);
 
+//DELETE /aidb/:id/review
+// router.delete('/review/:id', aidbCtrl.deleteReview)
+router.delete('/reviews/:id', aidbCtrl.deleteReview);
+
 
 
 
