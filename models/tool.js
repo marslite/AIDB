@@ -40,7 +40,7 @@ const toolSchema = new mongoose.Schema({
     developers: {type: String, required: true},
     license : {type: String, required: true},
     reviews: [reviewSchema],
-    upvote: {type: String, default:0}
+    upvote: Array
 },{
     timestamps: true
 })

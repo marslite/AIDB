@@ -16,6 +16,9 @@ router.post('/',aidbCtrl.create)
 // GET /aidb/:id SHOW the single Tool
 router.get('/:id',aidbCtrl.show )
 
+//GET UPDATE Upvote
+router.put('/:id', aidbCtrl.update);
+
 
 
 

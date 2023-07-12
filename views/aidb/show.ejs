@@ -67,7 +67,9 @@
     <div>Licese:</div>
     <%= tool.license %>
     <div>Upvotes:</div>
-    <td><%= tool.upvote %></td>
+    <td><%= tool.upvote.length %></td>
+    <form id="add-upvote" method="POST" action="/aidb/<%= tool._id %>?_method=PUT">
+    <button type="submit">Upvote</button>
 
 
     
