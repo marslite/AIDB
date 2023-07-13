@@ -27,11 +27,16 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column; 
   justify-content: center;
   align-items: center;
+  height: 586px;
+  gap: 62px;
+
+
+   
 
 }
 
@@ -68,6 +73,39 @@ body{
     text-shadow: 0 2px 1px rgba(0,0,0,0.25);
     box-shadow: inset 0 3px rgba(255,255,255,0.2), inset 0 -4px rgba(0,0,0,0.1), inset 0 -25px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(0,0,0,0.25), 0 4px rgba(0,0,0,0.1);
     margin: 1vh;
-
-
   }
+
+  .new_input{
+    border-style: outset;
+    border-color: chartreuse;
+  }
+
+  .label_form{
+    text-align: center;
+    display: inline-block;
+    height: 18px;
+    width: 71px;
+    border-style: outset;
+    border-radius: 4px;
+    border-color: beige;
+  }
+
+
+#new-form {
+  height: 14vh;
+  width: 19vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.new_div{
+  border-style: outset;
+  border-radius: 15px;
+  height: 20vh;
+  width: 22vh;
+  align-items: center;
+  display: flex;
+  padding: 1vh;
+  justify-content: center;
+
+}

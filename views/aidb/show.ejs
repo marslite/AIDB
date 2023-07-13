@@ -27,7 +27,10 @@
     img{
       height: 13px;
       width: 13px;
+    }
 
+    .delete_button{
+      background-color: bisque;
     }
 
   </style>
@@ -118,9 +121,8 @@
                   <tr>
                     <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
                     <td><%= r.createdAt.toLocaleDateString() %></td>
-                    <td>
-                      <%= r.createdAt.toLocaleDateString() %>
-                    </td>
+
+
                     <td>
                       <%= r.content %>
                     </td>
@@ -130,7 +132,7 @@
                     <td>
                       <% if (user && user._id.equals(r.user)) { %>
                         <form action="/aidb/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                          <button type="submit">X</button>
+                          <button class="delete_button" type="submit">X</button>
                         </form>
                       <% } %>
                     </td>
