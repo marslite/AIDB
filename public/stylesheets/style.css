@@ -77,7 +77,8 @@ body{
 
   .new_input{
     border-style: outset;
-    border-color: chartreuse;
+    border-color: beige;
+    border-radius: 14px;
   }
 
   .label_form{
@@ -86,8 +87,12 @@ body{
     height: 18px;
     width: 71px;
     border-style: outset;
-    border-radius: 4px;
-    border-color: beige;
+    border-radius: 8px;
+    border-color: blanchedalmond;
+    /* background-color: rgb(238,238,238); */
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230615/pngtree-thai-gold-background-abstract-king-retro-pattern-exotic-border-luxurious-element-image_3360824.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
 
@@ -101,11 +106,30 @@ body{
 .new_div{
   border-style: outset;
   border-radius: 15px;
-  height: 20vh;
-  width: 22vh;
+  height: 23vh;
+  width: 23vh;
   align-items: center;
   display: flex;
   padding: 1vh;
   justify-content: center;
+  background-image: url('http://static.wikeo.be/files/12425/doc%202%20/m/bg_pattern_clouds.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: -7vh;
+  margin-top:1vh;
+  
 
 }
+
+.add_tool{
+  margin-top: 7px;
+  margin-left: 9vh;
+}
+
+
+.select_license {
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+ }
+ 
