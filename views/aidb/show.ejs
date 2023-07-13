@@ -68,8 +68,13 @@
     <%= tool.license %>
     <div>Upvotes:</div>
     <td><%= tool.upvote.length %></td>
+    <% if (user) { %>
     <form id="add-upvote" method="POST" action="/aidb/<%= tool._id %>?_method=PUT">
     <button type="submit">Upvote</button>
+    </form>
+    <% } else { %>
+      <p>You must be logged to upvote </p>
+      <% } %>
 
 
     

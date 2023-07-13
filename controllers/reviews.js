@@ -3,7 +3,8 @@ const ToolModel = require("../models/tool");
 module.exports ={createReview,deleteReview};
 
 async function createReview(req,res){
-    console.log(req.body);
+
+    console.log(req.body, "<- Inside createReview");
     try {
         const toolFromTheDatabase = await ToolModel.findById(req.params.id);
 
