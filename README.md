@@ -5,6 +5,10 @@
 <img width="800" alt="AIDB"  src="https://i.imgur.com/ds0FwWM.png">
 </p>
 
+<p align="center">
+<img width="800" alt="AIDB"  src="https://i.imgur.com/ORx2ZJT.png">
+</p>
+
 
 <h4>Simplicist and intuitive Database of AI Tools for boosting productivity.
 AIDB is an AI Tool database that enables users to share and discover their favorite AI tools based on categories, developers, and licenses. It serves as a platform for promoting awareness and facilitating collaboration among AI enthusiasts</h4>
