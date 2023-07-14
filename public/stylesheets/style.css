@@ -23,7 +23,8 @@
 
 body{
   margin:0;
-  background-image: url('https://images.pexels.com/photos/159519/back-to-school-paper-colored-paper-stationery-159519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  /* background-image: url('https://images.pexels.com/photos/159519/back-to-school-paper-colored-paper-stationery-159519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+  background-image: url('https://cdn.pixabay.com/photo/2020/10/14/16/14/space-5654794_1280.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -35,9 +36,22 @@ body{
   height: 586px;
   gap: 62px;
 
+}
 
-   
-
+.navbar {
+  height: 19vh;
+  border-style: ridge;
+  border-radius: 14px;
+   width: auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 2vh;
+   /* background-image: url('https://cdn.pixabay.com/photo/2020/12/06/16/16/cosmos-5809271_1280.png'); */
+   /* background-image: url('https://cdn.pixabay.com/photo/2021/08/07/14/36/modern-6528732_1280.png'); */
+   background-image: url('https://cdn.pixabay.com/photo/2017/01/17/22/49/background-1988348_1280.png');
+   background-repeat: repeat;
+   background-size: cover;
 }
 
 .indexP {
@@ -79,16 +93,19 @@ body{
     border-style: outset;
     border-color: beige;
     border-radius: 14px;
+    height: 23px;
+    width: 176px;
   }
 
   .label_form{
     text-align: center;
     display: inline-block;
     height: 18px;
-    width: 71px;
+    width: 178px;
     border-style: outset;
-    border-radius: 8px;
+    border-radius: 7px;
     border-color: blanchedalmond;
+    justify-content: center;
     /* background-color: rgb(238,238,238); */
     background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230615/pngtree-thai-gold-background-abstract-king-retro-pattern-exotic-border-luxurious-element-image_3360824.jpg');
     background-size: cover;
@@ -99,6 +116,7 @@ body{
 #new-form {
   height: 14vh;
   width: 19vh;
+  margin-top: -9vh;
   /* display: flex; */
   /* flex-direction: column; */
 }
@@ -106,29 +124,42 @@ body{
 .new_div{
   border-style: outset;
   border-radius: 15px;
-  height: 23vh;
-  width: 23vh;
+  min-height: 26vh;
+  min-width: 52vh;
   align-items: center;
   display: flex;
-  padding: 1vh;
-  justify-content: center;
+  padding: 3vh;
+  justify-content: flex-start;
   background-image: url('http://static.wikeo.be/files/12425/doc%202%20/m/bg_pattern_clouds.gif');
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: -7vh;
-  margin-top:1vh;
-  
+  border-width: 1vh;
+  margin-bottom: 9vh;
 
 }
 
 .add_tool{
-  margin-top: 7px;
-  margin-left: 9vh;
+  /* margin-top: 7px; */
+  margin-left: 36vh;
+  width: 17vh;
+  margin-top: -18px;
 }
 
+.div_div {
+  border-style: ridge;
+
+  width: 21vh;
+  height: 24vh;
+  border-radius: 16px;
+  border-width: 1vh;
+  border-color: antiquewhite;
+}
 
 .select_license {
   border-radius: 14px;
+  width: 176px;
+  height: 23px;
   text-align: center;
   font-weight: bold;
  }

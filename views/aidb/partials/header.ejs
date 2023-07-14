@@ -34,14 +34,14 @@
     }
 
     .index_button{
-      height: 3vh;
-      width: 17vh;
+      height: 6vh;
+      width: 24vh;
       border-style: revert;
-      border-radius: 8px;
+      border-radius: 41px;
     }
 
     .navbar {
-     height: 13vh;
+     height: 19vh;
      border-style: ridge;
      border-radius: 14px;
       width: auto;
@@ -102,18 +102,12 @@
 <body>
   <nav class="navbar">
     <a href="/aidb"><button class="index_button"><b>AIDB</b>🏡</button></a>
-    <!-- &nbsp;|&nbsp; -->
-    <!-- <a href="/flights/new">EDIT</a> -->
-    <!-- &nbsp;|&nbsp; -->
-    <!-- <a href="/flights">EDIT</a> -->
-
-    <!-- <img src="/images/camera.svg"> -->
 
     <% if (user) { %>
       <a href="/aidb/new"><button class="index_button">➕ AI Tool</button></a>
       <a href="/logout"><button class="index_button">🚪Logout</button></a>
       <% } else { %>
-        <a href="/auth/google" class="login"><button><img src="https://i.imgur.com/FHjYyi0.png">Log In</button></a>
+        <a href="/auth/google" class="login"><button class="index_button"><img src="https://i.imgur.com/FHjYyi0.png">Log In</button></a>
       <% } %>
   </nav>
 
