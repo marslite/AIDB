@@ -31,6 +31,17 @@ AIDB is an AI Tool database that enables users to share and discover their favor
 </p>
 
 
+<h3><b>Tech Stack:</b></h3>
+<ul>
+<li>Mongoose</li>
+<li>Node.js</li>
+<li>Express.js</li>
+<li>EJS</li>
+<li>Javascript</li>
+<li>MongoDB</li>
+</ul>
+
+
 
 <h3><b>Current MVP:</b></h3>
 
