@@ -7,14 +7,32 @@
   <title>AIDB ~ AI Tools Database</title>
   <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
   <style>
-    body{
+    /* body{
       margin: 0;
       background-color: rgb(215, 215, 215);
+    } */
+
+    body{
+      margin: 0;
+      /* background-color: rgb(215, 215, 215); */
+      /* background-image: url('https://cdn.pixabay.com/photo/2017/01/31/17/55/background-2025984_1280.png'); */
+      background-image: url('https://cdn.pixabay.com/photo/2020/10/14/16/14/space-5654794_1280.png');
+      background-size: cover;
+      background-repeat: repeat;
     }
-    a{
+
+
+    /* a{
       font-size: large;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    } */
+
+    a{
+      font-size: large;
+      font-family: 'Ubuntu', sans-serif;
+      /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     }
+
     #show-page>div{
       font-size: large;
       /* color: beige; */
@@ -24,64 +42,170 @@
       color: beige;
     }
 
+    .index_button{
+      height: 6vh;
+      width: 24vh;
+      border-style: revert;
+      border-radius: 41px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
     img{
       height: 13px;
       width: 13px;
     }
 
+    .navbar {
+     height: 19vh;
+     border-style: ridge;
+     border-radius: 14px;
+      width: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 2vh;
+      /* background-image: url('https://cdn.pixabay.com/photo/2020/12/06/16/16/cosmos-5809271_1280.png'); */
+      /* background-image: url('https://cdn.pixabay.com/photo/2021/08/07/14/36/modern-6528732_1280.png'); */
+      background-image: url('https://cdn.pixabay.com/photo/2017/01/17/22/49/background-1988348_1280.png');
+      background-repeat: repeat;
+      background-size: cover;
+      font-family: 'Ubuntu', sans-serif;
+}
+
     .delete_button{
       background-color: bisque;
     }
 
+  #list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 24px;
+  height: 46vh;
+  border: solid;
+  padding: 30px;
+  border-color: aliceblue;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.tool_div {
+  display: flex;
+  border: solid;
+  border-style: groove;
+  border-radius: 12px;
+  min-height: 200px;
+  min-width: 201px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: snow;
+  padding: 38px;
+  border-width: 13px;
+  opacity: 5;
+  background-image: url('https://cdn.pixabay.com/photo/2021/08/07/14/36/stripes-6528728_1280.png');
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+.intro {
+  height:25px;
+  width: 90px;
+  border-style: inset;
+  border-radius: 32px;
+  margin-left: 50px;
+  border-width: 16px;
+  font-weight: bolder;
+  background-image: url('https://cdn.pixabay.com/photo/2021/08/07/14/36/stripes-6528728_1280.png');
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.tool {
+  height: 51px;
+  border-style: inset;
+  border-width: 7px;
+  width: 192px;
+  border-radius: 5px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+
+.upvote_btn {
+  height: 36px;
+  width: 78px;
+  border-radius: 24px;
+  margin-left: 55px;
+}
+
+#add-review-form {
+ height: 149px;
+ width: 705px;
+ border: solid;
+ border-style: dashed;
+ margin-left: 302px;
+}
+
+.table_top{
+   margin-left: 460px;
+   border: solid;
+   border-style: outset;
+}
+
+
   </style>
 </head>
 
-<body>
-  <nav>
-    <a href="/aidb"><button><b>AIDB</b>🏡</button></a>
-    &nbsp;|&nbsp;
-    <!-- <a href="/flights/new">EDIT</a> -->
-    &nbsp;|&nbsp;
-    <!-- <a href="/flights">EDIT</a> -->
 
-    <!-- <img src="/images/camera.svg"> -->
 
-    <% if (user) { %>
-      <a href="/aidb/new"><button>➕ AI Tool</button></a>
-      <a href="/logout"><button>🚪Logout</button></a>
-      <% } else { %>
-        <a href="/auth/google" class="login"><button><img src="https://i.imgur.com/FHjYyi0.png">Log In</button></a>
-      <% } %>
-  </nav>
+  <body>
+    <nav class="navbar">
+      <a href="/aidb"><button class="index_button"><b>AIDB</b>🏡</button></a>
+  
+      <% if (user) { %>
+        <a href="/aidb/new"><button class="index_button">➕ AI Tool</button></a>
+        <a href="/logout"><button class="index_button">🚪Logout</button></a>
+        <% } else { %>
+          <a href="/auth/google" class="login"><button class="index_button"><img src="https://i.imgur.com/FHjYyi0.png">Log In</button></a>
+        <% } %>
+    </nav>
 
-<section id="show-page">
-    <div>Title: </div>
-    <div>
+<div id="list">
+
+<div class="tool_div">
+    <button class="intro">Title</button>
+    <button class="tool">
       <%= tool.title %>
-    </div>
-    <div>Category: </div>
-    <div>
+    </button>
+    <button class="intro">Category</button>
+    <button class="tool">
       <%= tool.category %>
-    </div>
-    <div>Developer: </div>
-    <div>
+    </button>
+    <button class="intro">Develope</button>
+    <button class="tool">
       <%= tool.developers %>
-    </div>
-    <div>Licese:</div>
+    </button>
+    <button class="intro">Licese</button>
+    <button class="tool">
     <%= tool.license %>
-    <div>Upvotes:</div>
-    <td><%= tool.upvote.length %></td>
+    </button>
+    <button class="intro">Upvotes</button>
+    <button class="tool"><%= tool.upvote.length %></button>
     <% if (user) { %>
     <form id="add-upvote" method="POST" action="/aidb/<%= tool._id %>?_method=PUT">
-    <button type="submit">Upvote</button>
+    <button class="upvote_btn" type="submit">👍</button>
     </form>
     <% } else { %>
       <p>You must be logged to upvote </p>
       <% } %>
+    </div>
 
 
-    
-  </section>
+
+  
+</div>
 
 
 
@@ -107,7 +231,7 @@
         <!-- // Create a list of reviews here -->
 
         <% if (tool.reviews.length) { %>
-            <table>
+            <table class="table_top">
               <thead>
                 <tr>
                   <th>User</th>
