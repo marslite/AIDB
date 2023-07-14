@@ -39,6 +39,9 @@ AIDB is an AI Tool database that enables users to share and discover their favor
 <ul>
 <li>AI Tools Homepage: AIDB provides an index page that showcases all the AI tools added by users. This allows users to explore and discover new tools.</li>
 <li>Adding a Tool: Users can contribute to AIDB by adding new AI tools. When adding a tool, users can specify its category, developers, and license information.</li>
+<p align="center">
+<img width="800" alt="Adding AI Tool"  src="https://i.imgur.com/KuFuhya.png">
+</p>
 <li>Upvoting and Reviews: Users have the ability to upvote and leave reviews for the AI tools listed in AIDB. This helps to highlight popular and highly-rated tools and provides valuable feedback for users.</li>
 <li>User-Friendly Interface: The intuitive interface makes it easy to navigate AIDB.
 </li>
