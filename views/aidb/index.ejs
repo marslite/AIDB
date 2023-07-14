@@ -1,30 +1,23 @@
 <%- include('./partials/header') %>
 
-<table id="list">
-    <thead>
-      <tr>
-        <!-- <th>Title</th>
-        <th>Category</th>
-        <th></th> -->
-      </tr>
-    </thead>
-    <tbody>
+<div id="list">
+
         
       <% tools.forEach(function(t){ %>
-        <tr>
-          <td><%= t.title %></td>
-          <td><%= t.category %></td>
-          <td><%= t.license %></td>
-          <td><a href="/aidb/<%= t._id %>">Click</a></td>
-        </tr>
+        <div class="tool_div">
+          <button class="tool"><%= t.title %></button>
+          <button class="tool"><%= t.category %></button>
+          <button class="tool"><%= t.license %></h3>
+          <button class="tool"><a href="/aidb/<%= t._id %>">Click</a></td>
+      </div>
 
         <% }); %>
       <td><% tools.title %></td>
       
-    </tbody>
 
 
-  </table>
+
+  </div>
 
 
 

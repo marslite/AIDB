@@ -9,7 +9,11 @@
   <style>
     body{
       margin: 0;
-      background-color: rgb(215, 215, 215);
+      /* background-color: rgb(215, 215, 215); */
+      /* background-image: url('https://cdn.pixabay.com/photo/2017/01/31/17/55/background-2025984_1280.png'); */
+      background-image: url('https://cdn.pixabay.com/photo/2020/10/14/16/14/space-5654794_1280.png');
+      background-size: cover;
+      background-repeat: repeat;
     }
     a{
       font-size: large;
@@ -27,24 +31,87 @@
     img{
       height: 13px;
       width: 13px;
-
     }
+
+    .index_button{
+      height: 3vh;
+      width: 17vh;
+      border-style: revert;
+      border-radius: 8px;
+    }
+
+    .navbar {
+     height: 13vh;
+     border-style: ridge;
+     border-radius: 14px;
+      width: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 2vh;
+      /* background-image: url('https://cdn.pixabay.com/photo/2020/12/06/16/16/cosmos-5809271_1280.png'); */
+      /* background-image: url('https://cdn.pixabay.com/photo/2021/08/07/14/36/modern-6528732_1280.png'); */
+      background-image: url('https://cdn.pixabay.com/photo/2017/01/17/22/49/background-1988348_1280.png');
+      background-repeat: repeat;
+      background-size: cover;
+}
+
+.tool_s{
+  height: 2vh;
+}
+
+.tool_div{
+  display: flex;
+  border: solid;
+  border-style: groove;
+  border-radius: 12px;
+  min-height: 20vh;
+  min-width: 20vh;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: snow;
+  padding: 38px;
+  border-width: 13px;
+  opacity: 5;
+}
+
+#list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 24px;
+  height: 86vh;
+  border: solid;
+  padding: 30px;
+  border-color: aliceblue;
+}
+
+.tool {
+  height: 40px;
+  border-style: dotted;
+  border-width: 7px;
+  width: 192px;
+  border-radius: 28px;
+}
+
+
+
 
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/aidb"><button><b>AIDB</b>🏡</button></a>
-    &nbsp;|&nbsp;
+  <nav class="navbar">
+    <a href="/aidb"><button class="index_button"><b>AIDB</b>🏡</button></a>
+    <!-- &nbsp;|&nbsp; -->
     <!-- <a href="/flights/new">EDIT</a> -->
-    &nbsp;|&nbsp;
+    <!-- &nbsp;|&nbsp; -->
     <!-- <a href="/flights">EDIT</a> -->
 
     <!-- <img src="/images/camera.svg"> -->
 
     <% if (user) { %>
-      <a href="/aidb/new"><button>➕ AI Tool</button></a>
-      <a href="/logout"><button>🚪Logout</button></a>
+      <a href="/aidb/new"><button class="index_button">➕ AI Tool</button></a>
+      <a href="/logout"><button class="index_button">🚪Logout</button></a>
       <% } else { %>
         <a href="/auth/google" class="login"><button><img src="https://i.imgur.com/FHjYyi0.png">Log In</button></a>
       <% } %>
