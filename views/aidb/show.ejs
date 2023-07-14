@@ -101,7 +101,7 @@
   padding: 38px;
   border-width: 13px;
   opacity: 5;
-  background-image: url('https://cdn.pixabay.com/photo/2021/08/07/14/36/stripes-6528728_1280.png');
+  background-image: url('https://cdn.pixabay.com/photo/2017/07/08/10/24/orange-2484007_1280.png');
   background-repeat: repeat;
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
@@ -210,6 +210,7 @@
 
 
   <% if (user) { %>
+    <div class="review_top">
     <form id="add-review-form" method="POST" action="/aidb/<%= tool._id %>/review">
       <label>Review:</label>
       <textarea name="content"></textarea>
@@ -226,6 +227,7 @@
     <% } else { %>
       <p>Please Login to leave a review</p>
     <% } %>
+    </div>
 
 
         <!-- // Create a list of reviews here -->
