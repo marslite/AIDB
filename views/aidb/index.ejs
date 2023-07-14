@@ -6,9 +6,11 @@
       <% tools.forEach(function(t){ %>
         <div class="tool_div">
           <button class="tool"><%= t.title %></button>
+          <button class="intro"> Category</button>
           <button class="tool"><%= t.category %></button>
+          <button class="intro"> License</button>
           <button class="tool"><%= t.license %></h3>
-          <button class="tool"><a href="/aidb/<%= t._id %>">Click</a></td>
+          <button class="click_open"><a href="/aidb/<%= t._id %>">Click</a></td>
       </div>
 
         <% }); %>
