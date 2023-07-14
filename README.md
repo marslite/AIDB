@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-<img width="800" alt="AIDB"  src="https://imgur.com/1bc7c67b-c585-4ee7-b087-4247f36bb525">
+<img width="800" alt="AIDB"  src="https://i.imgur.com/WU7l0Np.png">
 </p>
 
 
