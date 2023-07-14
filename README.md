@@ -54,6 +54,15 @@ AIDB is an AI Tool database that enables users to share and discover their favor
 
 </ul>
 
+<h3><b>Getting Started</b>,</h3>
+
+To demo AIDB click <a href="https://giant-teal-tunic.cyclic.app"><b>here</b></a>
+Trello: <a href="https://trello.com/b/vGIEBBin/ai-tools-database-aidb"><b>link</b></a>
+
+
+
+
+
 
 
 
